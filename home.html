@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <body>
+      {% for row in result %}
+    <table border = 1 style="float: left">
+      <tr>
+        <td>Emotion</td>
+      </tr>
+  
+        <tr>
+          <td> {{ row.emotion }} </td>
+          <td>
+            {% if 'happiness' in row.emotion %}
+            <img  width="200px" height="200px" src="https://image.shutterstock.com/z/stock-photo-golden-retriever-puppy-1580008444.jpg" alt="Puppy">
+            {% elif 'sadness' in row.emotion %}
+            <img  width="200px" height="200px" src="https://i.barkpost.com/wp-content/uploads/2013/11/sad-dog1.jpg?q=70&fit=crop&crop=entropy&w=808&h=500" alt="Puppy">
+            {% elif 'neutral' in row.emotion %}
+            <img  width="200px" height="200px" src="https://doggiedesigner.com/wp-content/uploads/2018/11/Best-Rottweiler-Names-1.jpg" alt="Puppy">
+            {% elif 'anger' in row.emotion %}
+            <img  width="200px" height="200px" src="https://barkpost.com/wp-content/uploads/2015/02/angry.jpg" alt="Puppy">
+            {% else %}
+            <img  width="200px" height="200px" src="https://cdn.shopify.com/s/files/1/1782/7783/products/108010461.jpg?v=1571609914" alt="Puppy">
+            {% endif %}
+          </td>
+        </tr>
+    
+    </table>
+    {% endfor %}
+  </body>
+</html>
